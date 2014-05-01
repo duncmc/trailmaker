@@ -50,11 +50,17 @@ TrailMaker.module('Main', function(Main, App) {
 			
 			Main.trail = new App.Models.Trail();
 			
+			
 			if (navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(function(geolocation) {
+				
+				var success = function(geolocation) {
 					var latlng = [geolocation.coords.latitude, geolocation.coords.longitude];
-					this.centerMap(latlng);
-				});
+					Main.controller.centerMap(latlng);
+				}
+				
+				var error = function() { console.log('Fail!'); }
+				
+				navigator.geolocation.getCurrentPosition(success, error, {timeout:10000});
 			}
 			
 			this.initMap(options.el_id, options);
