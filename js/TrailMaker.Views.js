@@ -26,6 +26,15 @@ TrailMaker.module('Views', function(Views, App) {
 	 */
 	Views.PointPopUpView = Backbone.Marionette.ItemView.extend({
 		
+		templateHelpers: {
+			lat: function(){
+				return Math.floor(this.latlng.lat * 100000) / 100000;
+			},
+			lng: function(){
+				return Math.floor(this.latlng.lng * 100000) / 100000;
+			}
+		},
+		
 		template: '#template-point-popup',
 		tagName:'div'
 		

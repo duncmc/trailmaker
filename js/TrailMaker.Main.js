@@ -50,7 +50,7 @@ TrailMaker.module('Main', function(Main, App) {
 			
 			Main.trail = new App.Models.Trail();
 			
-			
+			/*
 			if (navigator.geolocation) {
 				
 				var success = function(geolocation) {
@@ -62,7 +62,7 @@ TrailMaker.module('Main', function(Main, App) {
 				
 				navigator.geolocation.getCurrentPosition(success, error, {timeout:10000});
 			}
-			
+			*/
 			this.initMap(options.el_id, options);
 			
 		},
@@ -134,14 +134,12 @@ TrailMaker.module('Main', function(Main, App) {
 				order: Main.trail.length
 			});
 			
-			var content = new App.Views.PointPopUpView(point).render();
-			console.log(content);
-			/*
+			var content = new App.Views.PointPopUpView({ model:point }).render();
+			
 			Main.popup
 				.setLatLng(e.latlng)
-				.setContent(content)
+				.setContent(content.el)
 				.openOn(Main.map);
-			*/
 		},
 		
 		

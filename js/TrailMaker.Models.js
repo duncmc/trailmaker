@@ -25,27 +25,8 @@ TrailMaker.module('Models', function(Models, App) {
 		 *
 		 */
 		initialize: function(options){
-			console.log(this);
-		},
-		
-		/**
-		 * Lat
-		 *
-		 * Returns the point’s latitude to 6 decimal places
-		 */
-		lat: function(){
-			return Math.floor(this.get('latlng').lat * 100000) / 100000;
-		},
-		
-		/**
-		 * Lng
-		 *
-		 * Returns the point’s longitude to 6 decimal places
-		 */
-		lng: function(){
-			return Math.floor(this.get('latlng').lng * 100000) / 100000;
+		//	console.log(this);
 		}
-		
 	});
 	
 	/**
