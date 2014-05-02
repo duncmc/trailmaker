@@ -25,7 +25,30 @@ TrailMaker.module('Models', function(Models, App) {
 		 *
 		 */
 		initialize: function(options){
-		//	console.log(this);
+			
+			this.attributes.latlng.lat = Math.floor(this.get('latlng').lat * 100000) / 100000;
+			this.attributes.latlng.lng = Math.floor(this.get('latlng').lng * 100000) / 100000;
+			
+			this.on('change:marker', function(point, marker, e){
+				
+				var that = this;
+				
+				console.log('Marker changed');
+				
+				if (!this.previous('marker')) {
+					marker.on('drag', function(e){
+						var latlng = e.target.getLatLng();
+						
+						latlng.lat = Math.floor(latlng.lat * 100000) / 100000;
+						latlng.lng = Math.floor(latlng.lng * 100000) / 100000;
+						
+						that.set('latlng', latlng);
+					});
+				}
+				
+			}).on('change:latlng', function(point, latlng, e){
+				this.get('marker').setLatLng(this.get('latlng'));//.update();
+			});
 		}
 	});
 	

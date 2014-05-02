@@ -51,12 +51,13 @@ TrailMaker.module('Main', function(Main, App) {
 			
 			Main.trail = new App.Models.Trail();
 			Main.trail.on('add', function(point, trail, e){
-				var trail_list_view = new App.Views.TrailPointListView({ collection:trail });
+				var marker = L.marker(point.get('latlng'), { draggable:true }).addTo(App.Main.map);
+				point.set('marker', marker);
+			}).on('change', function(point, e){
+				var trail_list_view = new App.Views.TrailPointListView({ collection:point.collection });
 				App.points_list_region.show(trail_list_view);
-				
-				var marker = L.marker(point.get('latlng')).addTo(App.Main.map);
-				
-				model.set('marker', marker);
+			}).on('remove', function(model, trail, e){
+				Main.map.removeLayer(model.get('marker'));
 			});
 			
 			/*

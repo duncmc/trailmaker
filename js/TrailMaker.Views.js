@@ -22,10 +22,44 @@ TrailMaker.module('Views', function(Views, App) {
 			}
 		},
 		
+		events: {
+			'click button.delete': function(){
+				this.model.collection.remove(this.model);
+			},
+			'click button.edit': function(){
+				this.makeEditable();
+			},
+			'keyup input': function(e){
+				if (e.keyCode == 13){
+					
+					var contents = $(e.currentTarget).val().split(',');
+					
+					if (contents.length != 2) {
+						return alert('Lat/Long coordinates are invalid');
+					}
+					
+					var lat = Number(contents[0].trim());
+					var lng = Number(contents[1].trim());
+					
+					if (_.isNaN(lat) || _.isNaN(lng)) {
+						return alert('Lat/Long coordinates are invalid');
+					}
+					
+					var latlng = { lat:lat, lng:lng };
+					
+					this.model.set('latlng', latlng);
+				}
+			}
+		},
+		
 		template: '#template-point-list-item',
 		tagName:'li',
 		className:'point',
 		
+		makeEditable: function(really){
+			var content = this.model.get('latlng').lat + ', ' + this.model.get('latlng').lng;
+			this.$el.find('.latlng').html('<input type="text" value="' + content + '">');
+		}
 	});
 	
 	/**
