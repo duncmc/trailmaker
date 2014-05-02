@@ -26,8 +26,8 @@ TrailMaker.module('Models', function(Models, App) {
 		 */
 		initialize: function(options){
 			
-			this.attributes.latlng.lat = this.normalize(this.get('latlng').lat); // Math.floor(this.get('latlng').lat * 100000) / 100000;
-			this.attributes.latlng.lng = this.normalize(this.get('latlng').lng); //Math.floor(this.get('latlng').lng * 100000) / 100000;
+			this.attributes.latlng.lat = this.normalize(this.get('latlng').lat);
+			this.attributes.latlng.lng = this.normalize(this.get('latlng').lng);
 			
 			this.on('change:marker', function(point, marker, e){
 				
@@ -44,7 +44,7 @@ TrailMaker.module('Models', function(Models, App) {
 				}
 				
 			}).on('change:latlng', function(point, latlng, e){
-				this.get('marker').setLatLng(this.get('latlng'));//.update();
+				this.get('marker').setLatLng(this.get('latlng'));
 			});
 		},
 		
