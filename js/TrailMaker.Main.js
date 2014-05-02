@@ -50,9 +50,13 @@ TrailMaker.module('Main', function(Main, App) {
 		start: function(options){
 			
 			Main.trail = new App.Models.Trail();
-			Main.trail.on('add', function(model, collection, e){
-				var trail_list_view = new App.Views.TrailPointListView({ collection:collection });
+			Main.trail.on('add', function(point, trail, e){
+				var trail_list_view = new App.Views.TrailPointListView({ collection:trail });
 				App.points_list_region.show(trail_list_view);
+				
+				var marker = L.marker(point.get('latlng')).addTo(App.Main.map);
+				
+				model.set('marker', marker);
 			});
 			
 			/*
@@ -153,9 +157,6 @@ TrailMaker.module('Main', function(Main, App) {
 		// UTILITY METHODS
 		// -----------------------------------------
 		
-		addPoint: function(){
-			Main.trail.add(Main.point);
-		}
 	});
 	
 	/**

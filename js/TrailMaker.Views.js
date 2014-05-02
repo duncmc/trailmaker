@@ -46,8 +46,8 @@ TrailMaker.module('Views', function(Views, App) {
 		
 		events: {
 			'click button.add-point': function(){
-				App.Main.trail.add(this.model);
 				App.Main.map.closePopup();
+				App.Main.trail.add(this.model);
 			}
 		},
 		
