@@ -10,6 +10,7 @@ TrailMaker.module('Main', function(Main, App) {
 	Main.router;
 	
 	Main.trail;
+	Main.point;
 	
 	Main.popup;
 	Main.map;
@@ -49,6 +50,10 @@ TrailMaker.module('Main', function(Main, App) {
 		start: function(options){
 			
 			Main.trail = new App.Models.Trail();
+			Main.trail.on('add', function(model, collection, e){
+				var trail_list_view = new App.Views.TrailPointListView({ collection:collection });
+				App.points_list_region.show(trail_list_view);
+			});
 			
 			/*
 			if (navigator.geolocation) {
@@ -129,12 +134,12 @@ TrailMaker.module('Main', function(Main, App) {
 		
 		showLatLng: function(e){
 			
-			var point = new App.Models.Point({
+			Main.point = new App.Models.Point({
 				latlng: e.latlng,
 				order: Main.trail.length
 			});
 			
-			var content = new App.Views.PointPopUpView({ model:point }).render();
+			var content = new App.Views.PointPopUpView({ model:Main.point }).render();
 			
 			Main.popup
 				.setLatLng(e.latlng)
@@ -148,6 +153,9 @@ TrailMaker.module('Main', function(Main, App) {
 		// UTILITY METHODS
 		// -----------------------------------------
 		
+		addPoint: function(){
+			Main.trail.add(Main.point);
+		}
 	});
 	
 	/**

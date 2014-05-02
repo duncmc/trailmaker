@@ -81,7 +81,9 @@
 			<h1>TrailMaker</h1>
 		</header>
 		
-		
+		<section id="trail-points-list">
+			<h1>Points</h1>
+		</section>
 		
 		
 	</div>
@@ -92,6 +94,12 @@
 		   <b>Lng:</b> <%=lng()%></p>
 		   <button class="add-point" type="button">Add</button>
 	</script>
+
+	<script type="text/html" id="template-point-list-item">
+		<%=lat()%>, <%=lng()%>
+	</script>
+	
+	
 	
 	
 	<script type="text/javascript">

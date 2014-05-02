@@ -13,6 +13,15 @@ TrailMaker.module('Views', function(Views, App) {
 	 */
 	Views.PointListItemView = Backbone.Marionette.ItemView.extend({
 		
+		templateHelpers: {
+			lat: function(){
+				return Math.floor(this.latlng.lat * 100000) / 100000;
+			},
+			lng: function(){
+				return Math.floor(this.latlng.lng * 100000) / 100000;
+			}
+		},
+		
 		template: '#template-point-list-item',
 		tagName:'li',
 		className:'point',
@@ -35,6 +44,13 @@ TrailMaker.module('Views', function(Views, App) {
 			}
 		},
 		
+		events: {
+			'click button.add-point': function(){
+				App.Main.trail.add(this.model);
+				App.Main.map.closePopup();
+			}
+		},
+		
 		template: '#template-point-popup',
 		tagName:'div'
 		
@@ -46,12 +62,11 @@ TrailMaker.module('Views', function(Views, App) {
 	 *
 	 *
 	 */
-	Views.TrailPointListView = Backbone.Marionette.CompositeView.extend({
+	Views.TrailPointListView = Backbone.Marionette.CollectionView.extend({
 		
-		template: '#template-trail-point-list',
-		tagName: 'section',
+	//	template: '#template-trail-point-list',
+		tagName: 'ol',
 		itemView: Views.PointListItemView,
-		itemViewContainer: 'ol',
 		
 	});
 });
