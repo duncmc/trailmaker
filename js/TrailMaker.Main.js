@@ -141,7 +141,7 @@ TrailMaker.module('Main', function(Main, App) {
 			
 			Main.point = new App.Models.Point({
 				latlng: e.latlng,
-				order: Main.trail.length
+				ordinal: Main.trail.length
 			});
 			
 			var content = new App.Views.PointPopUpView({ model:Main.point }).render();

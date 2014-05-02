@@ -33,8 +33,6 @@ TrailMaker.module('Models', function(Models, App) {
 				
 				var that = this;
 				
-				console.log('Marker changed');
-				
 				if (!this.previous('marker')) {
 					marker.on('drag', function(e){
 						var latlng = e.target.getLatLng();
@@ -60,7 +58,7 @@ TrailMaker.module('Models', function(Models, App) {
 	Models.Trail = Backbone.Collection.extend({
 		
 		model: Models.Point,
-		comparator:'order',
+		comparator:'ordinal',
 		
 		/**
 		 * Initialize

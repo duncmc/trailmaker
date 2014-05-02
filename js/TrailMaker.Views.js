@@ -110,5 +110,18 @@ TrailMaker.module('Views', function(Views, App) {
 		tagName: 'ol',
 		itemView: Views.PointListItemView,
 		
+		events: {
+			'sortupdate':function(e, ui) {
+				this.children.each(function(view){
+					view.model.attributes.ordinal = view.$el.index();
+				});
+				
+				this.collection.sort();
+			}
+		},
+		
+		onRender:function(){
+			this.$el.sortable();
+		}
 	});
 });
