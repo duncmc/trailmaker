@@ -27,7 +27,10 @@ TrailMaker.module('Views', function(Views, App) {
 				this.model.collection.remove(this.model);
 			},
 			'click button.edit': function(){
-				this.makeEditable();
+				this.makeEditable(true);
+			},
+			'click button.cancel': function(){
+				this.makeEditable(false);
 			},
 			'keyup input': function(e){
 				if (e.keyCode == 13){
@@ -57,8 +60,13 @@ TrailMaker.module('Views', function(Views, App) {
 		className:'point',
 		
 		makeEditable: function(really){
-			var content = this.model.get('latlng').lat + ', ' + this.model.get('latlng').lng;
-			this.$el.find('.latlng').html('<input type="text" value="' + content + '">');
+			if (really) {
+				var content = this.model.get('latlng').lat + ', ' + this.model.get('latlng').lng;
+				this.$el.find('.latlng').html('<input type="text" value="' + content + '">');
+				this.$el.find('button.edit').addClass('hidden');
+			} else {
+				this.render();
+			}
 		}
 	});
 	
