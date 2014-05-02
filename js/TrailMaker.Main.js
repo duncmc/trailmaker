@@ -18,6 +18,8 @@ TrailMaker.module('Main', function(Main, App) {
 	Main.default_zoom = 13;
 	Main.default_center = [53.738666, -0.333152];
 	
+	Main.add_a_point_form;
+	
 	/**
 	 * Basemap Router
 	 *
@@ -65,6 +67,8 @@ TrailMaker.module('Main', function(Main, App) {
 				Main.map.removeLayer(model.get('marker'));
 				Main.controller.redrawPath();
 			});
+			
+			Main.add_a_point_form = new App.Views.AddPointView({ el:'#add-a-point', trail:Main.trail });
 			
 			/*
 			if (navigator.geolocation) {

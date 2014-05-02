@@ -15,10 +15,10 @@ TrailMaker.module('Views', function(Views, App) {
 		
 		templateHelpers: {
 			lat: function(){
-				return Math.floor(this.latlng.lat * 100000) / 100000;
+				return this.latlng.lat;
 			},
 			lng: function(){
-				return Math.floor(this.latlng.lng * 100000) / 100000;
+				return this.latlng.lng;
 			}
 		},
 		
@@ -79,10 +79,10 @@ TrailMaker.module('Views', function(Views, App) {
 		
 		templateHelpers: {
 			lat: function(){
-				return Math.floor(this.latlng.lat * 100000) / 100000;
+				return this.latlng.lat;
 			},
 			lng: function(){
-				return Math.floor(this.latlng.lng * 100000) / 100000;
+				return this.latlng.lng;
 			}
 		},
 		
@@ -123,5 +123,37 @@ TrailMaker.module('Views', function(Views, App) {
 		onRender:function(){
 			this.$el.sortable();
 		}
+	});
+	
+	/**
+	 * Add Point View (View)
+	 *
+	 *
+	 */
+	Views.AddPointView = Backbone.View.extend({
+		
+		events: {
+			'submit':function(e){
+				e.preventDefault();
+				var lat = this.$el.find('input#input-lat').val().trim();
+				var lng = this.$el.find('input#input-lng').val().trim();
+				
+				if (_.isNaN(Number(lat)) || _.isNaN(Number(lng)) || lat == '' || lng == '') {
+					return alert('Lat/Long coordinates are invalid');
+				}
+				
+				var options = {
+					latlng: { lat:lat, lng:lng },
+					ordinal: this.trail.length
+				};
+				
+				this.trail.add(options);
+			}
+		},
+		
+		initialize: function(options) {
+			this.trail = options.trail;
+		}
+		
 	});
 });

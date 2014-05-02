@@ -26,8 +26,8 @@ TrailMaker.module('Models', function(Models, App) {
 		 */
 		initialize: function(options){
 			
-			this.attributes.latlng.lat = Math.floor(this.get('latlng').lat * 100000) / 100000;
-			this.attributes.latlng.lng = Math.floor(this.get('latlng').lng * 100000) / 100000;
+			this.attributes.latlng.lat = this.normalize(this.get('latlng').lat); // Math.floor(this.get('latlng').lat * 100000) / 100000;
+			this.attributes.latlng.lng = this.normalize(this.get('latlng').lng); //Math.floor(this.get('latlng').lng * 100000) / 100000;
 			
 			this.on('change:marker', function(point, marker, e){
 				
@@ -36,9 +36,8 @@ TrailMaker.module('Models', function(Models, App) {
 				if (!this.previous('marker')) {
 					marker.on('drag', function(e){
 						var latlng = e.target.getLatLng();
-						
-						latlng.lat = Math.floor(latlng.lat * 100000) / 100000;
-						latlng.lng = Math.floor(latlng.lng * 100000) / 100000;
+						latlng.lat = that.normalize(latlng.lat);
+						latlng.lng = that.normalize(latlng.lng);
 						
 						that.set('latlng', latlng);
 					});
@@ -47,6 +46,19 @@ TrailMaker.module('Models', function(Models, App) {
 			}).on('change:latlng', function(point, latlng, e){
 				this.get('marker').setLatLng(this.get('latlng'));//.update();
 			});
+		},
+		
+		/**
+		 *
+		 *
+		 */
+		normalize: function(ordinate){
+			
+			ordinate = Math.round(ordinate * 100000) / 100000;
+			ordinate = Math.min(ordinate, 180);
+			ordinate = Math.max(ordinate, -180);
+			
+			return ordinate;
 		}
 	});
 	
