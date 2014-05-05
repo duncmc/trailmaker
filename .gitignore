@@ -1,2 +1,5 @@
 # OSX noise
 .DS_Store
+
+# Caches
+.sass_cache
