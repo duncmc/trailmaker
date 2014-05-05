@@ -1,0 +1,65 @@
+// SCSS Mixin File
+// -----------------------------------------------------
+// Author: Duncan McMillan
+
+// Modules
+//
+// Rules for reusable page components.
+
+#trail-points-list {
+	position:relative;
+	overflow:auto;
+	margin-bottom:1rem;
+	
+	ol {
+		position:relative;
+		margin:0;
+		padding:0 0 0 2rem;
+		
+		li.point {
+			position:relative;
+			float:left;
+			border:#C00 solid 1px;
+		}
+	}
+}
+
+.toolbar {
+	display:block;
+	position:absolute;
+	top:0px;
+	left:100%;
+	width:60px;
+
+	button {
+		float:left;
+		width:1.6rem;
+		height:1.6rem;
+		margin:0 1px;
+		
+		@include border-radius(3px);
+		
+		background-color:#C00;
+		border:none;
+		font-size:0;
+		color:transparent;
+	}
+}
+
+form#add-a-point {
+	display:block;
+	overflow:auto;
+	
+	label, input[type="text"] {
+		display:block;
+		float:left;
+	}
+	
+	label {
+		width:2.5rem;
+	}
+	
+	input[type="text"] {
+		width:5rem;
+	}
+}

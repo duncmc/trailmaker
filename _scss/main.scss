@@ -1,0 +1,89 @@
+// (S)CSS Style Sheet Definition
+// -----------------------------------------------------
+//
+// Author: Duncan McMillan
+
+// Configuration Variables
+// -----------------------------------------------------
+$theme-colour:#639;
+$accent-colour:#FCC933;
+
+$body-background-colour:#181818;
+$body-colour:#FFF;
+
+$page-background-colour:#FFF;
+$page-colour:#666;
+
+$error-colour:#C00;
+
+
+// Box -------------------------------------------------
+$gutter:10px;
+
+// Fonts -----------------------------------------------
+@import url(http://fonts.googleapis.com/css?family=Bitter:700|Source+Sans+Pro:400,700);
+
+// Border ----------------------------------------------
+$default-border-radius:.4rem;
+
+// Text ------------------------------------------------
+$em: 1.4rem;
+$linespace: 1.5em;
+
+$h1-size: $em * 1.8;
+$h2-size: $h1-size * .75;
+$h3-size: $h1-size * .667;
+$h4-size: $h1-size * .584;
+$h5-size: $em;
+
+// Mixins
+// -----------------------------------------------------
+@import "compass/reset";
+@import "compass/css3/text-shadow";
+@import "compass/css3/border-radius";
+@import "compass/css3/images";
+@import "compass/css3/box-shadow";
+@import "compass/css3/box-sizing";
+
+// Custom Mixins
+// -----------------------------------------------------
+@import "grid";
+
+
+// Local Mixins
+// -----------------------------------------------------
+@mixin shadow-text { @include text-shadow(rgba(black, .5) 1px 1px 0px); }
+@mixin engraved-text { @include text-shadow(rgba(#000, .5) -1px -1px 0px); }
+@mixin small-text { font-size:$em * .8; line-height:125%; }
+@mixin tiny-text { font-size:$em * .65; }
+
+@mixin sprite {
+	display:block;
+	float:left;
+	text-indent:-2000px;
+	overflow:hidden;
+}
+
+@mixin base-font-stack {
+	font-family:'Source Sans Pro', "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+@mixin alt-font-stack {
+	font-family:'Bitter', Georgia, serif;
+}
+
+@mixin bold { font-weight:bold; }
+@mixin italic { font-style:italic; }
+
+
+/**
+ * SMACSS
+ * ----------------------------------------
+ * CSS structure based on SMACSS by Jonathan Snook
+ *
+ * http://smacss.com
+ */
+@import "smacss_base";
+@import "smacss_layout";
+@import "smacss_modules";
+@import "smacss_state";

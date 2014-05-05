@@ -1,0 +1,145 @@
+// SCSS Mixin File
+// -----------------------------------------------------
+// Author: Duncan McMillan
+
+// Base
+// 
+// Augments the reset and sets default rules.
+
+html {
+	font-size:62.5%;
+}
+
+body {
+//	position:relative;
+	background:$body-background-colour;
+
+	@include base-font-stack;
+	font-size:1.4rem;
+	line-height:$linespace;
+	
+	color:$page-background-colour;
+	
+}
+
+article {
+	margin-bottom:$linespace;
+	
+	img {
+		margin-bottom:$linespace * .5;
+	}
+}
+
+ul, ol, dl {
+	margin:0 0 $em $em * 2;
+}
+
+ol {
+	list-style:disc;
+}
+
+ol {
+	list-style:decimal;
+}
+
+
+h1, h2, h3, h4 { 
+	margin-bottom:$em * .5;
+	line-height:1.175em;
+	@include bold;
+}
+
+h1 {
+	@include alt-font-stack;
+	color:$theme-colour;
+}
+
+p { margin-bottom:$em; }
+
+h1 { font-size:$h1-size; }
+h2 { font-size:$h2-size; }
+h3 { font-size:$h3-size; }
+h4 { font-size:$h4-size; }
+h5 { font-size:$h5-size; }
+
+b, strong { @include bold; }
+i, em { @include italic; }
+
+a {
+	text-decoration:none;
+	
+	
+	&:link, &:visited {
+		color:$theme-colour;
+	}
+	
+	&:hover, &:active {
+		
+	}
+}
+
+form {
+	input {
+		display:block;
+	}
+	
+	input[type="text"], textarea {
+		
+		@include box-sizing(border-box);
+		width:100%;
+		
+		padding:0 .4rem;
+		margin-bottom:$em;
+		
+		@include border-radius;
+		border:none;
+		
+		@include base-font-stack;
+		font-size:$h4-size;
+		line-height:2em;
+		
+	}
+	
+	label {
+		display:block;
+		@include bold;
+		line-height:2em;
+	}
+	
+	.required:after {
+		content:' *';
+		color:$error-colour;
+	}
+	
+	input[type="submit"] {
+		padding:6px 9px;
+		margin-left:0px;
+		margin-bottom:$linespace;
+		
+		font-size:$h4-size;
+		@include bold;
+		
+		background-color:$theme-colour;
+		color:$page-background-colour;
+		
+		@include border-radius;
+		border:none;
+		
+		&:hover, &:active {
+			cursor:pointer;
+		}
+	}
+}
+
+nav ul {
+	margin:0;
+	list-style:none;
+}
+
+.small, small { @include small-text; }
+
+.aligncenter { display:block; margin:$em * .5 $em auto; }
+.alignleft { display:block; float:left; margin:$em * .5 $em $em * .5 0; }
+.alignright { display:block; float:right; margin:$em * .5 0 $em * .5 $em; }
+
+.error { color:$error-colour; }

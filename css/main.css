@@ -1,0 +1,346 @@
+@import url(http://fonts.googleapis.com/css?family=Bitter:700|Source+Sans+Pro:400,700);
+/* line 17, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/**
+ * SMACSS
+ * ----------------------------------------
+ * CSS structure based on SMACSS by Jonathan Snook
+ *
+ * http://smacss.com
+ */
+/* line 9, ../_scss/_smacss_base.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 13, ../_scss/_smacss_base.scss */
+body {
+  background: #181818;
+  font-family: 'Source Sans Pro', "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+  color: white;
+}
+
+/* line 25, ../_scss/_smacss_base.scss */
+article {
+  margin-bottom: 1.5em;
+}
+/* line 28, ../_scss/_smacss_base.scss */
+article img {
+  margin-bottom: 0.75em;
+}
+
+/* line 33, ../_scss/_smacss_base.scss */
+ul, ol, dl {
+  margin: 0 0 1.4rem 2.8rem;
+}
+
+/* line 37, ../_scss/_smacss_base.scss */
+ol {
+  list-style: disc;
+}
+
+/* line 41, ../_scss/_smacss_base.scss */
+ol {
+  list-style: decimal;
+}
+
+/* line 46, ../_scss/_smacss_base.scss */
+h1, h2, h3, h4 {
+  margin-bottom: 0.7rem;
+  line-height: 1.175em;
+  font-weight: bold;
+}
+
+/* line 52, ../_scss/_smacss_base.scss */
+h1 {
+  font-family: 'Bitter', Georgia, serif;
+  color: #663399;
+}
+
+/* line 57, ../_scss/_smacss_base.scss */
+p {
+  margin-bottom: 1.4rem;
+}
+
+/* line 59, ../_scss/_smacss_base.scss */
+h1 {
+  font-size: 2.52rem;
+}
+
+/* line 60, ../_scss/_smacss_base.scss */
+h2 {
+  font-size: 1.89rem;
+}
+
+/* line 61, ../_scss/_smacss_base.scss */
+h3 {
+  font-size: 1.681rem;
+}
+
+/* line 62, ../_scss/_smacss_base.scss */
+h4 {
+  font-size: 1.472rem;
+}
+
+/* line 63, ../_scss/_smacss_base.scss */
+h5 {
+  font-size: 1.4rem;
+}
+
+/* line 65, ../_scss/_smacss_base.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 66, ../_scss/_smacss_base.scss */
+i, em {
+  font-style: italic;
+}
+
+/* line 68, ../_scss/_smacss_base.scss */
+a {
+  text-decoration: none;
+}
+/* line 72, ../_scss/_smacss_base.scss */
+a:link, a:visited {
+  color: #663399;
+}
+
+/* line 82, ../_scss/_smacss_base.scss */
+form input {
+  display: block;
+}
+/* line 86, ../_scss/_smacss_base.scss */
+form input[type="text"], form textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 .4rem;
+  margin-bottom: 1.4rem;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+  border-radius: 0.4rem;
+  border: none;
+  font-family: 'Source Sans Pro', "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 1.472rem;
+  line-height: 2em;
+}
+/* line 103, ../_scss/_smacss_base.scss */
+form label {
+  display: block;
+  font-weight: bold;
+  line-height: 2em;
+}
+/* line 109, ../_scss/_smacss_base.scss */
+form .required:after {
+  content: ' *';
+  color: #cc0000;
+}
+/* line 114, ../_scss/_smacss_base.scss */
+form input[type="submit"] {
+  padding: 6px 9px;
+  margin-left: 0px;
+  margin-bottom: 1.5em;
+  font-size: 1.472rem;
+  font-weight: bold;
+  background-color: #663399;
+  color: white;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+  border-radius: 0.4rem;
+  border: none;
+}
+/* line 128, ../_scss/_smacss_base.scss */
+form input[type="submit"]:hover, form input[type="submit"]:active {
+  cursor: pointer;
+}
+
+/* line 134, ../_scss/_smacss_base.scss */
+nav ul {
+  margin: 0;
+  list-style: none;
+}
+
+/* line 139, ../_scss/_smacss_base.scss */
+.small, small {
+  font-size: 1.12rem;
+  line-height: 125%;
+}
+
+/* line 141, ../_scss/_smacss_base.scss */
+.aligncenter {
+  display: block;
+  margin: 0.7rem 1.4rem auto;
+}
+
+/* line 142, ../_scss/_smacss_base.scss */
+.alignleft {
+  display: block;
+  float: left;
+  margin: 0.7rem 1.4rem 0.7rem 0;
+}
+
+/* line 143, ../_scss/_smacss_base.scss */
+.alignright {
+  display: block;
+  float: right;
+  margin: 0.7rem 0 0.7rem 1.4rem;
+}
+
+/* line 145, ../_scss/_smacss_base.scss */
+.error {
+  color: #cc0000;
+}
+
+/* line 10, ../_scss/_smacss_layout.scss */
+#layout-info-pane {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 18rem;
+  padding: 1rem;
+}
+
+/* line 17, ../_scss/_smacss_layout.scss */
+#layout-map-pane {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 20rem;
+  border: #FFF solid 1px;
+}
+
+/* line 9, ../_scss/_smacss_modules.scss */
+#trail-points-list {
+  position: relative;
+  overflow: auto;
+  margin-bottom: 1rem;
+}
+/* line 14, ../_scss/_smacss_modules.scss */
+#trail-points-list ol {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 2rem;
+}
+/* line 19, ../_scss/_smacss_modules.scss */
+#trail-points-list ol li.point {
+  position: relative;
+  float: left;
+  border: #C00 solid 1px;
+}
+
+/* line 27, ../_scss/_smacss_modules.scss */
+.toolbar {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  width: 60px;
+}
+/* line 34, ../_scss/_smacss_modules.scss */
+.toolbar button {
+  float: left;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0 1px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #C00;
+  border: none;
+  font-size: 0;
+  color: transparent;
+}
+
+/* line 49, ../_scss/_smacss_modules.scss */
+form#add-a-point {
+  display: block;
+  overflow: auto;
+}
+/* line 53, ../_scss/_smacss_modules.scss */
+form#add-a-point label, form#add-a-point input[type="text"] {
+  display: block;
+  float: left;
+}
+/* line 58, ../_scss/_smacss_modules.scss */
+form#add-a-point label {
+  width: 2.5rem;
+}
+/* line 62, ../_scss/_smacss_modules.scss */
+form#add-a-point input[type="text"] {
+  width: 5rem;
+}

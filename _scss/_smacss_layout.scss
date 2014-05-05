@@ -1,0 +1,22 @@
+// SCSS Mixin File
+// -----------------------------------------------------
+// Author: Duncan McMillan
+// 
+
+// Layout
+//
+// Defines rules for the major layout elements within the page.
+
+#layout-info-pane {
+	position:absolute;
+	top:0px; left:0px; bottom:0px;
+	width:18rem;
+	padding:1rem;
+}
+
+#layout-map-pane {
+	position:absolute;
+	top:0px; right:0px; bottom:0px; left:20rem;
+	
+	border:#FFF solid 1px;
+}
