@@ -19,31 +19,70 @@
 		li.point {
 			position:relative;
 			float:left;
-			border:#C00 solid 1px;
+			
+			padding:.2rem 0 .2rem 1.6rem;
+			@include border-radius(1.4rem);
+			
+			color:#999;
+			
+			.latlng {
+				color:#FFF;
+			}
+			
+			.toolbar {
+				display:none;
+				position:absolute;
+				top:0px;
+				left:100%;
+				width:3.6rem;
+				height:1.6rem;
+			}
+			
+			&:hover, &:active {
+				
+				.toolbar {
+					display:block;
+				}
+			}
+			
+			&:before {
+				display:block;
+				position:absolute;
+				top:.2rem;
+				left:0;
+				width:1.6rem;
+				height:1.6rem;
+				
+				content:"";
+				
+				background-image:url(images/icons.svg);
+				background-repeat:no-repeat;
+				background-size:8rem 1.6rem;
+				background-position:-6.4rem 0;
+			}
 		}
 	}
 }
 
-.toolbar {
-	display:block;
-	position:absolute;
-	top:0px;
-	left:100%;
-	width:60px;
-
-	button {
-		float:left;
-		width:1.6rem;
-		height:1.6rem;
-		margin:0 1px;
-		
-		@include border-radius(3px);
-		
-		background-color:#C00;
-		border:none;
-		font-size:0;
-		color:transparent;
-	}
+.toolbar button {
+	float:left;
+	width:1.6rem;
+	height:1.6rem;
+	margin:0 .1rem;
+	padding:0;
+	
+	background-image:url(images/icons.svg);
+	background-repeat:no-repeat;
+	background-size:8rem 1.6rem;
+	
+	border:none;
+	font-size:0;
+	color:transparent;
+	
+	&.cancel { background-position:0 0; }
+	&.add { background-position:-1.6rem 0; }
+	&.edit { background-position:-3.2rem 0; }
+	&.delete { background-position:-4.8rem 0; }
 }
 
 form#add-a-point {

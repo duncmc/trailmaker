@@ -298,49 +298,92 @@ nav ul {
 #trail-points-list ol li.point {
   position: relative;
   float: left;
-  border: #C00 solid 1px;
+  padding: .2rem 0 .2rem 1.6rem;
+  -webkit-border-radius: 1.4rem;
+  -moz-border-radius: 1.4rem;
+  -ms-border-radius: 1.4rem;
+  -o-border-radius: 1.4rem;
+  border-radius: 1.4rem;
+  color: #999;
 }
-
-/* line 27, ../_scss/_smacss_modules.scss */
-.toolbar {
-  display: block;
+/* line 28, ../_scss/_smacss_modules.scss */
+#trail-points-list ol li.point .latlng {
+  color: #FFF;
+}
+/* line 32, ../_scss/_smacss_modules.scss */
+#trail-points-list ol li.point .toolbar {
+  display: none;
   position: absolute;
   top: 0px;
   left: 100%;
-  width: 60px;
+  width: 3.6rem;
+  height: 1.6rem;
 }
-/* line 34, ../_scss/_smacss_modules.scss */
+/* line 43, ../_scss/_smacss_modules.scss */
+#trail-points-list ol li.point:hover .toolbar, #trail-points-list ol li.point:active .toolbar {
+  display: block;
+}
+/* line 48, ../_scss/_smacss_modules.scss */
+#trail-points-list ol li.point:before {
+  display: block;
+  position: absolute;
+  top: .2rem;
+  left: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  content: "";
+  background-image: url(images/icons.svg);
+  background-repeat: no-repeat;
+  background-size: 8rem 1.6rem;
+  background-position: -6.4rem 0;
+}
+
+/* line 67, ../_scss/_smacss_modules.scss */
 .toolbar button {
   float: left;
   width: 1.6rem;
   height: 1.6rem;
-  margin: 0 1px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  background-color: #C00;
+  margin: 0 .1rem;
+  padding: 0;
+  background-image: url(images/icons.svg);
+  background-repeat: no-repeat;
+  background-size: 8rem 1.6rem;
   border: none;
   font-size: 0;
   color: transparent;
 }
+/* line 82, ../_scss/_smacss_modules.scss */
+.toolbar button.cancel {
+  background-position: 0 0;
+}
+/* line 83, ../_scss/_smacss_modules.scss */
+.toolbar button.add {
+  background-position: -1.6rem 0;
+}
+/* line 84, ../_scss/_smacss_modules.scss */
+.toolbar button.edit {
+  background-position: -3.2rem 0;
+}
+/* line 85, ../_scss/_smacss_modules.scss */
+.toolbar button.delete {
+  background-position: -4.8rem 0;
+}
 
-/* line 49, ../_scss/_smacss_modules.scss */
+/* line 88, ../_scss/_smacss_modules.scss */
 form#add-a-point {
   display: block;
   overflow: auto;
 }
-/* line 53, ../_scss/_smacss_modules.scss */
+/* line 92, ../_scss/_smacss_modules.scss */
 form#add-a-point label, form#add-a-point input[type="text"] {
   display: block;
   float: left;
 }
-/* line 58, ../_scss/_smacss_modules.scss */
+/* line 97, ../_scss/_smacss_modules.scss */
 form#add-a-point label {
   width: 2.5rem;
 }
-/* line 62, ../_scss/_smacss_modules.scss */
+/* line 101, ../_scss/_smacss_modules.scss */
 form#add-a-point input[type="text"] {
   width: 5rem;
 }
