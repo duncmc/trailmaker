@@ -18,7 +18,7 @@ body {
 	font-size:1.4rem;
 	line-height:$linespace;
 	
-	color:$page-background-colour;
+	color:$body-colour;
 	
 }
 
@@ -49,16 +49,15 @@ h1, h2, h3, h4 {
 	@include bold;
 }
 
-h1 {
+h1, h2 {
 	@include alt-font-stack;
-	color:$theme-colour;
 }
 
 p { margin-bottom:$em; }
 
-h1 { font-size:$h1-size; }
-h2 { font-size:$h2-size; }
-h3 { font-size:$h3-size; }
+h1 { font-size:$h4-size; }
+h2 { font-size:$h4-size; }
+h3 { font-size:$h4-size; }
 h4 { font-size:$h4-size; }
 h5 { font-size:$h5-size; }
 
@@ -79,26 +78,40 @@ a {
 }
 
 form {
+	display:block;
+	overflow:auto;
+	padding:.5rem;
+	
+	background-color:$panel-colour;
+	
+	@include border-radius;
+	
 	input {
 		display:block;
 	}
 	
 	input[type="text"], textarea {
+		display:block;
+		float:left;
 		
 		@include box-sizing(border-box);
 		width:100%;
 		
-		padding:0 .4rem;
+		padding:0 .2rem;
 		margin-bottom:$em;
 		
 		@include border-radius;
 		border:none;
 		
+		background-color:$body-background-colour;
+		color:$body-colour;
+		
 		@include base-font-stack;
 		font-size:$h4-size;
-		line-height:2em;
+		line-height:1.5em;
 		
 	}
+	
 	
 	label {
 		display:block;
@@ -110,7 +123,7 @@ form {
 		content:' *';
 		color:$error-colour;
 	}
-	
+	/*
 	input[type="submit"] {
 		padding:6px 9px;
 		margin-left:0px;
@@ -129,6 +142,7 @@ form {
 			cursor:pointer;
 		}
 	}
+	*/
 }
 
 nav ul {

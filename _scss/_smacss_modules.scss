@@ -11,29 +11,24 @@
 	overflow:auto;
 	margin-bottom:1rem;
 	
-	ol {
+	ul {
 		position:relative;
 		margin:0;
-		padding:0 0 0 2rem;
+		padding:0;
 		
 		li.point {
 			position:relative;
-			float:left;
+			padding:.2rem 4rem .2rem 2rem;
+			margin:0 0 .2rem 0;
+			@include border-radius;
 			
-			padding:.2rem 0 .2rem 1.6rem;
-			@include border-radius(1.4rem);
-			
-			color:#999;
-			
-			.latlng {
-				color:#FFF;
-			}
+			background-color:$panel-colour;
 			
 			.toolbar {
 				display:none;
 				position:absolute;
-				top:0px;
-				left:100%;
+				top:.5rem;
+				right:.4rem;
 				width:3.6rem;
 				height:1.6rem;
 			}
@@ -48,8 +43,8 @@
 			&:before {
 				display:block;
 				position:absolute;
-				top:.2rem;
-				left:0;
+				top:.5rem;
+				left:.2rem;
 				width:1.6rem;
 				height:1.6rem;
 				
@@ -57,7 +52,7 @@
 				
 				background-image:url(images/icons.svg);
 				background-repeat:no-repeat;
-				background-size:8rem 1.6rem;
+				background-size:8rem 3.2rem;
 				background-position:-6.4rem 0;
 			}
 		}
@@ -71,9 +66,10 @@
 	margin:0 .1rem;
 	padding:0;
 	
+	background-color:transparent;
 	background-image:url(images/icons.svg);
 	background-repeat:no-repeat;
-	background-size:8rem 1.6rem;
+	background-size:8rem 3.2rem;
 	
 	border:none;
 	font-size:0;
@@ -83,22 +79,37 @@
 	&.add { background-position:-1.6rem 0; }
 	&.edit { background-position:-3.2rem 0; }
 	&.delete { background-position:-4.8rem 0; }
+	
+	&.hidden {
+		display:none;
+	}
 }
 
 form#add-a-point {
-	display:block;
-	overflow:auto;
 	
-	label, input[type="text"] {
-		display:block;
+	input {
 		float:left;
+		margin:0;
+		
+		&#input-lat, &#input-lng {
+			width:7rem;
+			margin-right:.5rem;
+		}
+		
+		&[type="submit"] {
+			width:1.6rem;
+			height:1.6rem;
+			margin-top:.3rem;
+			
+			font-size:0;
+			color:transparent;
+			border:none;
+			background-color:transparent;
+			background-image:url(images/icons.svg);
+			background-repeat:no-repeat;
+			background-size:8rem 3.2rem;
+			background-position:-1.6rem 0;
+		}
 	}
 	
-	label {
-		width:2.5rem;
-	}
-	
-	input[type="text"] {
-		width:5rem;
-	}
 }

@@ -5,14 +5,12 @@
 
 // Configuration Variables
 // -----------------------------------------------------
-$theme-colour:#639;
-$accent-colour:#FCC933;
+$theme-colour:#09A;
 
 $body-background-colour:#181818;
 $body-colour:#FFF;
 
-$page-background-colour:#FFF;
-$page-colour:#666;
+$panel-colour:mix(#FFF, $body-background-colour, 20);
 
 $error-colour:#C00;
 

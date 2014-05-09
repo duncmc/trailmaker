@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Bitter:700|Source+Sans+Pro:400,700);
-/* line 17, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, /Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -16,50 +16,50 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
+  font-size: 100%;
   vertical-align: baseline;
 }
 
-/* line 20, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-body {
+/* line 22, /Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
   line-height: 1;
 }
 
-/* line 22, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, /Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 24, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, /Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 26, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, /Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 28, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, /Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 101, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, /Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 30, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, /Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 114, ../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, /Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -71,12 +71,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  *
  * http://smacss.com
  */
-/* line 9, ../_scss/_smacss_base.scss */
+/* line 9, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 html {
   font-size: 62.5%;
 }
 
-/* line 13, ../_scss/_smacss_base.scss */
+/* line 13, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 body {
   background: #181818;
   font-family: 'Source Sans Pro', "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -85,103 +85,136 @@ body {
   color: white;
 }
 
-/* line 25, ../_scss/_smacss_base.scss */
+/* line 25, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 article {
   margin-bottom: 1.5em;
 }
-/* line 28, ../_scss/_smacss_base.scss */
+/* line 28, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 article img {
   margin-bottom: 0.75em;
 }
 
-/* line 33, ../_scss/_smacss_base.scss */
+/* line 33, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 ul, ol, dl {
   margin: 0 0 1.4rem 2.8rem;
 }
 
-/* line 37, ../_scss/_smacss_base.scss */
+/* line 37, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 ol {
   list-style: disc;
 }
 
-/* line 41, ../_scss/_smacss_base.scss */
+/* line 41, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 46, ../_scss/_smacss_base.scss */
+/* line 46, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 h1, h2, h3, h4 {
   margin-bottom: 0.7rem;
   line-height: 1.175em;
   font-weight: bold;
 }
 
-/* line 52, ../_scss/_smacss_base.scss */
-h1 {
+/* line 52, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
+h1, h2 {
   font-family: 'Bitter', Georgia, serif;
-  color: #663399;
 }
 
-/* line 57, ../_scss/_smacss_base.scss */
+/* line 56, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 p {
   margin-bottom: 1.4rem;
 }
 
-/* line 59, ../_scss/_smacss_base.scss */
+/* line 58, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 h1 {
-  font-size: 2.52rem;
+  font-size: 1.47168rem;
 }
 
-/* line 60, ../_scss/_smacss_base.scss */
+/* line 59, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 h2 {
-  font-size: 1.89rem;
+  font-size: 1.47168rem;
 }
 
-/* line 61, ../_scss/_smacss_base.scss */
+/* line 60, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 h3 {
-  font-size: 1.681rem;
+  font-size: 1.47168rem;
 }
 
-/* line 62, ../_scss/_smacss_base.scss */
+/* line 61, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 h4 {
-  font-size: 1.472rem;
+  font-size: 1.47168rem;
 }
 
-/* line 63, ../_scss/_smacss_base.scss */
+/* line 62, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 h5 {
   font-size: 1.4rem;
 }
 
-/* line 65, ../_scss/_smacss_base.scss */
+/* line 64, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 b, strong {
   font-weight: bold;
 }
 
-/* line 66, ../_scss/_smacss_base.scss */
+/* line 65, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 i, em {
   font-style: italic;
 }
 
-/* line 68, ../_scss/_smacss_base.scss */
+/* line 67, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 a {
   text-decoration: none;
 }
-/* line 72, ../_scss/_smacss_base.scss */
+/* line 71, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 a:link, a:visited {
-  color: #663399;
+  color: #0099aa;
 }
 
-/* line 82, ../_scss/_smacss_base.scss */
+/* line 80, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
+form {
+  display: block;
+  overflow: auto;
+  padding: .5rem;
+  background-color: #464646;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+  border-radius: 0.4rem;
+  /*
+  input[type="submit"] {
+  	padding:6px 9px;
+  	margin-left:0px;
+  	margin-bottom:$linespace;
+  	
+  	font-size:$h4-size;
+  	@include bold;
+  	
+  	background-color:$theme-colour;
+  	color:$page-background-colour;
+  	
+  	@include border-radius;
+  	border:none;
+  	
+  	&:hover, &:active {
+  		cursor:pointer;
+  	}
+  }
+  */
+}
+/* line 89, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 form input {
   display: block;
 }
-/* line 86, ../_scss/_smacss_base.scss */
+/* line 93, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 form input[type="text"], form textarea {
+  display: block;
+  float: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  padding: 0 .4rem;
+  padding: 0 .2rem;
   margin-bottom: 1.4rem;
   -webkit-border-radius: 0.4rem;
   -moz-border-radius: 0.4rem;
@@ -189,80 +222,62 @@ form input[type="text"], form textarea {
   -o-border-radius: 0.4rem;
   border-radius: 0.4rem;
   border: none;
+  background-color: #181818;
+  color: white;
   font-family: 'Source Sans Pro', "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-size: 1.472rem;
-  line-height: 2em;
+  font-size: 1.47168rem;
+  line-height: 1.5em;
 }
-/* line 103, ../_scss/_smacss_base.scss */
+/* line 116, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 form label {
   display: block;
   font-weight: bold;
   line-height: 2em;
 }
-/* line 109, ../_scss/_smacss_base.scss */
+/* line 122, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 form .required:after {
   content: ' *';
   color: #cc0000;
 }
-/* line 114, ../_scss/_smacss_base.scss */
-form input[type="submit"] {
-  padding: 6px 9px;
-  margin-left: 0px;
-  margin-bottom: 1.5em;
-  font-size: 1.472rem;
-  font-weight: bold;
-  background-color: #663399;
-  color: white;
-  -webkit-border-radius: 0.4rem;
-  -moz-border-radius: 0.4rem;
-  -ms-border-radius: 0.4rem;
-  -o-border-radius: 0.4rem;
-  border-radius: 0.4rem;
-  border: none;
-}
-/* line 128, ../_scss/_smacss_base.scss */
-form input[type="submit"]:hover, form input[type="submit"]:active {
-  cursor: pointer;
-}
 
-/* line 134, ../_scss/_smacss_base.scss */
+/* line 148, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 nav ul {
   margin: 0;
   list-style: none;
 }
 
-/* line 139, ../_scss/_smacss_base.scss */
+/* line 153, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 .small, small {
   font-size: 1.12rem;
   line-height: 125%;
 }
 
-/* line 141, ../_scss/_smacss_base.scss */
+/* line 155, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 .aligncenter {
   display: block;
   margin: 0.7rem 1.4rem auto;
 }
 
-/* line 142, ../_scss/_smacss_base.scss */
+/* line 156, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 .alignleft {
   display: block;
   float: left;
   margin: 0.7rem 1.4rem 0.7rem 0;
 }
 
-/* line 143, ../_scss/_smacss_base.scss */
+/* line 157, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 .alignright {
   display: block;
   float: right;
   margin: 0.7rem 0 0.7rem 1.4rem;
 }
 
-/* line 145, ../_scss/_smacss_base.scss */
+/* line 159, /Users/duncan/Sites/trailmaker/_scss/_smacss_base.scss */
 .error {
   color: #cc0000;
 }
 
-/* line 10, ../_scss/_smacss_layout.scss */
+/* line 10, /Users/duncan/Sites/trailmaker/_scss/_smacss_layout.scss */
 #layout-info-pane {
   position: absolute;
   top: 0px;
@@ -271,8 +286,13 @@ nav ul {
   width: 18rem;
   padding: 1rem;
 }
+/* line 16, /Users/duncan/Sites/trailmaker/_scss/_smacss_layout.scss */
+#layout-info-pane header h1 {
+  font-size: 2.52rem;
+  color: #0099aa;
+}
 
-/* line 17, ../_scss/_smacss_layout.scss */
+/* line 22, /Users/duncan/Sites/trailmaker/_scss/_smacss_layout.scss */
 #layout-map-pane {
   position: absolute;
   top: 0px;
@@ -282,108 +302,115 @@ nav ul {
   border: #FFF solid 1px;
 }
 
-/* line 9, ../_scss/_smacss_modules.scss */
+/* line 9, /Users/duncan/Sites/trailmaker/_scss/_smacss_modules.scss */
 #trail-points-list {
   position: relative;
   overflow: auto;
   margin-bottom: 1rem;
 }
-/* line 14, ../_scss/_smacss_modules.scss */
-#trail-points-list ol {
+/* line 14, /Users/duncan/Sites/trailmaker/_scss/_smacss_modules.scss */
+#trail-points-list ul {
   position: relative;
   margin: 0;
-  padding: 0 0 0 2rem;
+  padding: 0;
 }
-/* line 19, ../_scss/_smacss_modules.scss */
-#trail-points-list ol li.point {
+/* line 19, /Users/duncan/Sites/trailmaker/_scss/_smacss_modules.scss */
+#trail-points-list ul li.point {
   position: relative;
-  float: left;
-  padding: .2rem 0 .2rem 1.6rem;
-  -webkit-border-radius: 1.4rem;
-  -moz-border-radius: 1.4rem;
-  -ms-border-radius: 1.4rem;
-  -o-border-radius: 1.4rem;
-  border-radius: 1.4rem;
-  color: #999;
+  padding: .2rem 4rem .2rem 2rem;
+  margin: 0 0 .2rem 0;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+  border-radius: 0.4rem;
+  background-color: #464646;
 }
-/* line 28, ../_scss/_smacss_modules.scss */
-#trail-points-list ol li.point .latlng {
-  color: #FFF;
-}
-/* line 32, ../_scss/_smacss_modules.scss */
-#trail-points-list ol li.point .toolbar {
+/* line 27, /Users/duncan/Sites/trailmaker/_scss/_smacss_modules.scss */
+#trail-points-list ul li.point .toolbar {
   display: none;
   position: absolute;
-  top: 0px;
-  left: 100%;
+  top: .5rem;
+  right: .4rem;
   width: 3.6rem;
   height: 1.6rem;
 }
-/* line 43, ../_scss/_smacss_modules.scss */
-#trail-points-list ol li.point:hover .toolbar, #trail-points-list ol li.point:active .toolbar {
+/* line 38, /Users/duncan/Sites/trailmaker/_scss/_smacss_modules.scss */
+#trail-points-list ul li.point:hover .toolbar, #trail-points-list ul li.point:active .toolbar {
   display: block;
 }
-/* line 48, ../_scss/_smacss_modules.scss */
-#trail-points-list ol li.point:before {
+/* line 43, /Users/duncan/Sites/trailmaker/_scss/_smacss_modules.scss */
+#trail-points-list ul li.point:before {
   display: block;
   position: absolute;
-  top: .2rem;
-  left: 0;
+  top: .5rem;
+  left: .2rem;
   width: 1.6rem;
   height: 1.6rem;
   content: "";
   background-image: url(images/icons.svg);
   background-repeat: no-repeat;
-  background-size: 8rem 1.6rem;
+  background-size: 8rem 3.2rem;
   background-position: -6.4rem 0;
 }
 
-/* line 67, ../_scss/_smacss_modules.scss */
+/* line 62, /Users/duncan/Sites/trailmaker/_scss/_smacss_modules.scss */
 .toolbar button {
   float: left;
   width: 1.6rem;
   height: 1.6rem;
   margin: 0 .1rem;
   padding: 0;
+  background-color: transparent;
   background-image: url(images/icons.svg);
   background-repeat: no-repeat;
-  background-size: 8rem 1.6rem;
+  background-size: 8rem 3.2rem;
   border: none;
   font-size: 0;
   color: transparent;
 }
-/* line 82, ../_scss/_smacss_modules.scss */
+/* line 78, /Users/duncan/Sites/trailmaker/_scss/_smacss_modules.scss */
 .toolbar button.cancel {
   background-position: 0 0;
 }
-/* line 83, ../_scss/_smacss_modules.scss */
+/* line 79, /Users/duncan/Sites/trailmaker/_scss/_smacss_modules.scss */
 .toolbar button.add {
   background-position: -1.6rem 0;
 }
-/* line 84, ../_scss/_smacss_modules.scss */
+/* line 80, /Users/duncan/Sites/trailmaker/_scss/_smacss_modules.scss */
 .toolbar button.edit {
   background-position: -3.2rem 0;
 }
-/* line 85, ../_scss/_smacss_modules.scss */
+/* line 81, /Users/duncan/Sites/trailmaker/_scss/_smacss_modules.scss */
 .toolbar button.delete {
   background-position: -4.8rem 0;
 }
+/* line 83, /Users/duncan/Sites/trailmaker/_scss/_smacss_modules.scss */
+.toolbar button.hidden {
+  display: none;
+}
 
-/* line 88, ../_scss/_smacss_modules.scss */
-form#add-a-point {
-  display: block;
-  overflow: auto;
-}
-/* line 92, ../_scss/_smacss_modules.scss */
-form#add-a-point label, form#add-a-point input[type="text"] {
-  display: block;
+/* line 90, /Users/duncan/Sites/trailmaker/_scss/_smacss_modules.scss */
+form#add-a-point input {
   float: left;
+  margin: 0;
 }
-/* line 97, ../_scss/_smacss_modules.scss */
-form#add-a-point label {
-  width: 2.5rem;
+/* line 94, /Users/duncan/Sites/trailmaker/_scss/_smacss_modules.scss */
+form#add-a-point input#input-lat, form#add-a-point input#input-lng {
+  width: 7rem;
+  margin-right: .5rem;
 }
-/* line 101, ../_scss/_smacss_modules.scss */
-form#add-a-point input[type="text"] {
-  width: 5rem;
+/* line 99, /Users/duncan/Sites/trailmaker/_scss/_smacss_modules.scss */
+form#add-a-point input[type="submit"] {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-top: .3rem;
+  font-size: 0;
+  color: transparent;
+  border: none;
+  background-color: transparent;
+  background-image: url(images/icons.svg);
+  background-repeat: no-repeat;
+  background-size: 8rem 3.2rem;
+  background-position: -1.6rem 0;
 }

@@ -107,7 +107,7 @@ TrailMaker.module('Views', function(Views, App) {
 	Views.TrailPointListView = Backbone.Marionette.CollectionView.extend({
 		
 	//	template: '#template-trail-point-list',
-		tagName: 'ol',
+		tagName: 'ul',
 		itemView: Views.PointListItemView,
 		
 		events: {
